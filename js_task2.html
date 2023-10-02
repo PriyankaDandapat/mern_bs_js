@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK 2</title>
+    <style>
+        body{
+            background-color: rgba(127, 255, 212, 0.353);
+        }
+        h1{
+            text-align: center;
+        }
+        /* form,p{
+            padding-left:35%;
+        } */
+        .container{
+            width:fit-content ;
+            margin-left:35%;
+            margin-top: 3%;
+            padding: 6rem;
+            background-color: rgb(91, 183, 152);
+            box-shadow: 5px 5px 10px rgba(32, 64, 53, 0.713);
+            border:2px solid rgba(19, 38, 31, 0.711);
+        }
+    </style>
+</head>
+<body>
+    <h1>JS TASK 2</h1>
+  <div class="container">
+     <form id="stringForm">
+    <label for="originalString">Enter a string:</label>
+    <input type="text" id="originalString" name="originalString" required>
+    <input type="submit" value="Sort">
+  </form>
+
+  <p>Sorted String: <span id="sortedString"></span></p>
+  </div>
+ 
+
+  <script>
+    function sortStringAlphabetically(inputString) {
+      // Convert the string to an array of characters, sort it, and then join it back into a string
+      return inputString.split('').sort().join('');
+    }
+
+    const stringForm = document.getElementById('stringForm');
+    const originalStringInput = document.getElementById('originalString');
+    const sortedStringOutput = document.getElementById('sortedString');
+
+    stringForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Get the user's input and sort it
+      const originalString = originalStringInput.value;
+      const sortedString = sortStringAlphabetically(originalString);
+
+      // Display the sorted string
+      sortedStringOutput.textContent = sortedString;
+    });
+  </script>
+    
+</body>
+</html>

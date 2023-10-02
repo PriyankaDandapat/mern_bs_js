@@ -1,0 +1,46 @@
+h2{
+    text-align: center;
+    background-color: rgb(0, 124, 124);
+    color: rgb(244, 255, 255);
+    padding: 0.3rem 10px auto 0.3rem;
+    margin-bottom: 0px;
+}
+.container-fluid{
+    background-color: rgb(194, 194, 194);
+    
+}
+nav.navbar.navbar-expand-lg.bg-body-tertiary.my-0.py-2{
+    padding-top: 0rem!important;
+    padding-bottom: 0rem!important;
+}
+a.btn.btn-primary{
+    background-color: rgb(194, 194, 194);
+    border-color: rgb(194, 194, 194);
+    color: black;
+
+}
+a.btn.btn-primary:hover{
+    background-color: rgb(168, 168, 168);
+
+}
+
+#Sidebar {
+    border:  solid grey;
+    background-color: grey;
+    color: white;
+    float: right;
+    padding-top: 0px;
+    margin-top: 0px;
+    padding-right: 180px;
+    padding-bottom: 550px;
+    
+    }
+p{
+    text-align: center;
+
+    }
+
+a.nav-link:hover{
+    background-color: rgb(168, 168, 168);
+
+    }

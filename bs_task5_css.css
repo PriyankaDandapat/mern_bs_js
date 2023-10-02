@@ -1,0 +1,11 @@
+.container{
+    margin:5rem;
+    padding: 3rem;
+    background-color: rgb(197, 197, 197);
+}
+.row.mb-3{
+    display: flex;
+}
+label,legend{
+    font-weight: bolder;
+}

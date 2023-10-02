@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS TASK 3</title>
+    <style>
+        body{
+            background-color:rgb(221, 255, 255) ;
+        }
+        h1{
+            text-align: center;
+        }
+        .container{
+            width: max-content ;
+            background-color: rgb(179, 255, 255);
+            padding: 3rem;
+            margin: 6rem;
+            margin-left: 40%;
+            box-shadow: 4px 4px 6px rgba(0, 4, 41, 0.616);
+            border: 2px solid rgba(0, 47, 104, 0.616);
+        }
+        .buttons{
+            margin-left: 30%;
+        }
+        .btn{
+            padding: 0.3rem;
+            background-color: rgba(0, 47, 104, 0.616);
+            color: white;
+        }
+        p{
+            margin-left: 10%;
+            background-color: rgb(234, 249, 255);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <h1>JS Task 3</h1>
+    <form>
+        <div>
+            1st Number : <input type="text" id="firstNumber" />
+        </div>
+    <br/>
+        <div>
+            2nd Number: <input type="text" id="secondNumber" />
+        </div>
+    <br/>
+        <div class="buttons">
+            <input type="button" onClick="multiplyBy()" Value="Multiply" class="btn" />
+            <input type="button" onClick="divideBy()" Value="Divide" class="btn" />
+        </div>
+    </form>
+    <p>The Result is : <br>
+    <span id = "result"></span>
+    </p>
+</div>
+
+    <script>
+        function multiplyBy()
+        {
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 * num2;
+        }
+
+        function divideBy() 
+        { 
+            num1 = document.getElementById("firstNumber").value;
+            num2 = document.getElementById("secondNumber").value;
+            document.getElementById("result").innerHTML = num1 / num2;
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 7</title>
+    <style>
+        .train-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+#train {
+  width: 100px;
+  position: relative;
+  animation: trainAnimation 5s linear infinite;
+}
+
+@keyframes trainAnimation {
+  0% {
+    left: -100px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+#id1{
+    text-align: center;
+}
+h2{
+    color:rgb(0, 0, 0);
+}
+button{
+    padding:0.7rem 1rem 0.7rem 1rem;
+    margin:auto 0.3rem auto 0.3rem;
+    background-color: rgb(211, 230, 255);
+    color: blue;
+    border: 1px solid black;
+}
+
+    </style>
+</head>
+<body>
+    <div class="train-container">
+        <img src="train.jpg" alt="Train" id="train">
+      </div>
+      <h2 style="text-align: center;">Click the following buttons to handle animation</h2>
+      <br/>
+      
+      <div id = "id1">
+      <button onclick="startTrain()">Start</button>
+      <button onclick="stopTrain()">Stop</button>
+      </div>
+      
+      
+      <script>
+          let trainElement;
+      let trainAnimation;
+      
+      function startTrain() {
+        trainElement = document.getElementById('train');
+        trainElement.style.animation = 'trainAnimation 5s linear infinite';
+      }
+      
+      function stopTrain() {
+        trainElement = document.getElementById('train');
+        trainElement.style.animation = 'none';
+      }
+      </script>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        label,p{
+            padding:20px;
+            margin: 20px;
+        }
+        .container{
+            margin-left: 35%;
+            padding: 30px;
+            background-color: beige;
+            width: max-content;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.469);
+            border: 3px solid rgb(122, 82, 0);
+
+        }
+    </style>
+</head>
+<body>
+    <h1>JS TASK 1</h1>
+    <div class="container">
+       <label for="numberInput">Enter a number: </label>
+<input type="number" id="numberInput">
+
+<p id="reversedNumber"></p> 
+    </div>
+    
+
+<script>
+  const numberInput = document.getElementById('numberInput');
+  const reversedNumberElement = document.getElementById('reversedNumber');
+
+  numberInput.addEventListener('input', () => {
+    const inputValue = parseFloat(numberInput.value);
+    const reversedNumber = parseFloat(inputValue.toString().split('').reverse().join(''));
+    if (!isNaN(reversedNumber)) {
+      reversedNumberElement.innerText = `Reversed number: ${reversedNumber}`;
+    } else {
+      reversedNumberElement.innerText = 'Please enter a valid number.';
+    }
+  });
+</script>
+
+    
+</body>
+</html>

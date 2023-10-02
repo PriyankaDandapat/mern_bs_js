@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Task 4</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(0, 69, 46);
+        }
+        body{
+            background-color: beige;
+        }
+        .buttons{
+            padding:0.3rem;
+            margin:0.2rem;
+            background-color: rgb(216, 255, 242);
+            color: rgb(0, 69, 46);
+            border: 1px solid rgb(0, 69, 46);
+        }
+        p,div{
+            margin-left: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h1>JS Task 4</h1>
+    <div>
+        <button onclick="showDate()" class="buttons">Show Date</button>
+    </div>
+    <p id="dateDisplay"></p>
+    <br/>
+    
+    <div>
+        <button onclick="showTime()" class="buttons">Show Time</button>
+    </div>
+    <p id="timeDisplay"></p>
+    
+    <script>
+      function showDate() {
+        const currentDateTime = new Date();
+        const day = currentDateTime.getDate();
+        const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+        const month = monthNames[currentDateTime.getMonth()];
+        const year = currentDateTime.getFullYear();
+    
+        const formattedDate = `${day}/${month}/${year}`;
+        document.getElementById('dateDisplay').innerText = `${formattedDate}`;
+      }
+    
+      function showTime() {
+        const options = { weekday: 'short', month: 'short', day: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit', timeZoneName: 'short' };
+        const currentIST = new Date().toLocaleString('en-US', { timeZone: 'Asia/Kolkata', ...options });
+        document.getElementById('timeDisplay').innerText = `${currentIST}`;
+      }
+    </script>
+    
+</body>
+</html>
